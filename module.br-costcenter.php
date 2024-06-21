@@ -10,7 +10,7 @@
 
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'br-costcenter/0.0.1',
+    'br-costcenter/0.0.2',
     array(
         // Identification
         //

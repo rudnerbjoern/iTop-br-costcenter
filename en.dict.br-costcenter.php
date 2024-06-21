@@ -10,6 +10,7 @@
 
 Dict::Add('EN US', 'English', 'English', array(
     'Menu:CostCenter' => 'Cost Centers',
+    'Menu:CostCenter+' => 'Cost Centers',
     'Class:CostCenter' => 'Cost Center',
     'Class:CostCenter+' => '',
     'Class:CostCenter/Attribute:code' => 'Code',
@@ -34,4 +35,8 @@ Dict::Add('EN US', 'English', 'English', array(
     'Class:CostCenter/Attribute:parent_id_friendlyname+' => 'Parent cost center',
     'Class:CostCenter/UniquenessRule:code_org' => 'The code must be unique',
     'Class:CostCenter/UniquenessRule:code_org+' => 'This cost center already exists',
+    'Class:FunctionalCI/Attribute:costcenter_id' => 'Cost center',
+    'Class:FunctionalCI/Attribute:costcenter_id+' => 'Cost center',
+    'Class:FunctionalCI/Attribute:costcenter_name' => 'Cost center name',
+    'Class:FunctionalCI/Attribute:costcenter_name+' => 'Cost center name',
 ));

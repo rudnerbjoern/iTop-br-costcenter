@@ -10,6 +10,7 @@
 
 Dict::Add('DE DE', 'German', 'Deutsch', array(
     'Menu:CostCenter' => 'Kostenstellen',
+    'Menu:CostCenter+' => 'Kostenstellen',
     'Class:CostCenter' => 'Kostenstelle',
     'Class:CostCenter+' => '',
     'Class:CostCenter/Attribute:code' => 'Kennzahl',
@@ -34,4 +35,8 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
     'Class:CostCenter/Attribute:parent_id_friendlyname+' => '',
     'Class:CostCenter/UniquenessRule:code_org' => 'Die Kennzahl muss eindeutig sein',
     'Class:CostCenter/UniquenessRule:code_org+' => 'Eine Kostenstelle mit dier Kennzahl existiert bereits',
+    'Class:FunctionalCI/Attribute:costcenter_id' => 'Kostenstelle',
+    'Class:FunctionalCI/Attribute:costcenter_id+' => 'Kostenstelle',
+    'Class:FunctionalCI/Attribute:costcenter_name' => 'Name der Kostenstelle',
+    'Class:FunctionalCI/Attribute:costcenter_name+' => 'Name der Kostenstelle',
 ));

@@ -160,6 +160,23 @@
             </presentation>
             <methods />
         </class>
+        <!-- ***************** Extend other classes ***************** -->
+        <class id="FunctionalCI" _delta="must_exist">
+            <fields>
+                <field id="costcenter_id" xsi:type="AttributeExternalKey" _delta="define">
+                    <sql>costcenter_id</sql>
+                    <default_value />
+                    <target_class>CostCenter</target_class>
+                    <is_null_allowed>true</is_null_allowed>
+                    <on_target_delete>DEL_MANUAL</on_target_delete>
+                    <allow_target_creation>false</allow_target_creation>
+                </field>
+                <field id="costcenter_name" xsi:type="AttributeExternalField" _delta="define">
+                    <extkey_attcode>costcenter_id</extkey_attcode>
+                    <target_attcode>name</target_attcode>
+                </field>
+            </fields>
+        </class>
     </classes>
     <!-- ***************** Menus ***************** -->
     <menus>
@@ -172,5 +189,12 @@
     </menus>
     <!-- ***************** User Rights ***************** -->
     <user_rights>
+        <groups>
+            <group id="Configuration">
+                <classes>
+                    <class id="CostCenter" _delta="define" />
+                </classes>
+            </group>
+        </groups>
     </user_rights>
 </itop_design>
