@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.7">
+    <!--
+    * @copyright   Copyright (C) 2024 Björn Rudner
+    * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
+    -->
+    <classes>
+        <!-- ***************** Cost Center ***************** -->
+        <class id="CostCenter" _delta="define">
+            <parent>cmdbAbstractObject</parent>
+            <properties>
+                <category>bizmodel,searchable,structure</category>
+                <abstract>false</abstract>
+                <key_type>autoincrement</key_type>
+                <db_table>costcenter</db_table>
+                <db_key_field>id</db_key_field>
+                <db_final_class_field />
+                <naming>
+                    <attributes>
+                        <attribute id="code" />
+                        <attribute id="name" />
+                    </attributes>
+                </naming>
+                <icon>images/costcenter.png</icon>
+                <reconciliation>
+                    <attributes>
+                        <attribute id="code" />
+                        <attribute id="name" />
+                        <attribute id="org_id" />
+                        <attribute id="org_name" />
+                    </attributes>
+                </reconciliation>
+                <uniqueness_rules>
+                    <rule id="code_org">
+                        <attributes>
+                            <attribute id="code" />
+                            <attribute id="org_id" />
+                        </attributes>
+                        <is_blocking>true</is_blocking>
+                    </rule>
+                </uniqueness_rules>
+                <obsolescence>
+                    <condition>
+                        <condition><![CDATA[status = 'inactive']]></condition>
+                    </condition>
+                </obsolescence>
+            </properties>
+            <fields>
+                <field id="code" xsi:type="AttributeString">
+                    <sql>code</sql>
+                    <default_value />
+                    <is_null_allowed>false</is_null_allowed>
+                </field>
+                <field id="name" xsi:type="AttributeString">
+                    <sql>name</sql>
+                    <default_value />
+                    <is_null_allowed>false</is_null_allowed>
+                </field>
+                <field id="org_id" xsi:type="AttributeExternalKey">
+                    <sql>org_id</sql>
+                    <target_class>Organization</target_class>
+                    <is_null_allowed>false</is_null_allowed>
+                    <on_target_delete>DEL_MANUAL</on_target_delete>
+                </field>
+                <field id="org_name" xsi:type="AttributeExternalField">
+                    <extkey_attcode>org_id</extkey_attcode>
+                    <target_attcode>name</target_attcode>
+                </field>
+                <field id="status" xsi:type="AttributeEnum">
+                    <values>
+                        <value id="active">active</value>
+                        <value id="inactive">inactive</value>
+                    </values>
+                    <sql>status</sql>
+                    <default_value>active</default_value>
+                    <is_null_allowed>false</is_null_allowed>
+                    <display_style>list</display_style>
+                </field>
+                <field id="parent_id" xsi:type="AttributeHierarchicalKey">
+                    <sql>parent_id</sql>
+                    <is_null_allowed>true</is_null_allowed>
+                    <on_target_delete>DEL_MANUAL</on_target_delete>
+                </field>
+                <field id="parent_name" xsi:type="AttributeExternalField">
+                    <extkey_attcode>parent_id</extkey_attcode>
+                    <target_attcode>name</target_attcode>
+                </field>
+            </fields>
+            <presentation>
+                <details>
+                    <items>
+                        <item id="code">
+                            <rank>10</rank>
+                        </item>
+                        <item id="name">
+                            <rank>20</rank>
+                        </item>
+                        <item id="status">
+                            <rank>30</rank>
+                        </item>
+                        <item id="org_id">
+                            <rank>30</rank>
+                        </item>
+                        <item id="parent_id">
+                            <rank>40</rank>
+                        </item>
+                    </items>
+                </details>
+                <default_search>
+                    <items>
+                        <item id="code">
+                            <rank>10</rank>
+                        </item>
+                        <item id="name">
+                            <rank>20</rank>
+                        </item>
+                        <item id="org_id">
+                            <rank>30</rank>
+                        </item>
+                    </items>
+                </default_search>
+                <search>
+                    <items>
+                        <item id="code">
+                            <rank>10</rank>
+                        </item>
+                        <item id="name">
+                            <rank>20</rank>
+                        </item>
+                        <item id="status">
+                            <rank>30</rank>
+                        </item>
+                        <item id="org_id">
+                            <rank>30</rank>
+                        </item>
+                        <item id="parent_id">
+                            <rank>40</rank>
+                        </item>
+                    </items>
+                </search>
+                <list>
+                    <items>
+                        <item id="code">
+                            <rank>10</rank>
+                        </item>
+                        <item id="name">
+                            <rank>20</rank>
+                        </item>
+                        <item id="status">
+                            <rank>30</rank>
+                        </item>
+                        <item id="org_id">
+                            <rank>30</rank>
+                        </item>
+                        <item id="parent_id">
+                            <rank>40</rank>
+                        </item>
+                    </items>
+                </list>
+            </presentation>
+            <methods />
+        </class>
+    </classes>
+    <!-- ***************** Menus ***************** -->
+    <menus>
+        <menu id="CostCenter" xsi:type="OQLMenuNode" _delta="define">
+            <rank>12</rank>
+            <parent>Catalogs</parent>
+            <oql>SELECT CostCenter</oql>
+            <do_search>1</do_search>
+        </menu>
+    </menus>
+    <!-- ***************** User Rights ***************** -->
+    <user_rights>
+    </user_rights>
+</itop_design>

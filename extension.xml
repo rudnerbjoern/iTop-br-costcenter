@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension format="1.0">
+    <extension_code>
+        <![CDATA[br-costcenter]]>
+    </extension_code>
+    <company>
+        <![CDATA[]]>
+    </company>
+    <author>
+        <![CDATA[Björn Rudner]]>
+    </author>
+    <label>
+        <![CDATA[Datamodel: Cost Center]]>
+    </label>
+    <description>
+        <![CDATA[Adds the ability to assign CIs to Cost Centers]]>
+    </description>
+    <version>
+        <![CDATA[0.0.1]]>
+    </version>
+    <release_date>
+        <![CDATA[2024-06-21]]>
+    </release_date>
+    <version_description>
+        <![CDATA[]]>
+    </version_description>
+    <itop_version_min>
+        <![CDATA[2.7.0]]>
+    </itop_version_min>
+    <status>stable</status>
+    <mandatory>false</mandatory>
+    <more_info_url>
+        <![CDATA[https://github.com/rudnerbjoern/iTop-br-costcenter/blob/main/README.md]]>
+    </more_info_url>
+</extension>
