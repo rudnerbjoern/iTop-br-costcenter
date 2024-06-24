@@ -188,8 +188,8 @@
                 </field>
             </fields>
         </class>
-        <!-- IP Phone -->
-        <class id="IPPhone">
+        <!-- Phone -->
+        <class id="Phone" _delta="if_exists">
             <presentation>
                 <details>
                     <items>
@@ -207,12 +207,88 @@
                 </search>
             </presentation>
         </class>
-        <!-- PC -->
-        <class id="PC">
+        <!-- Mobile Phone -->
+        <class id="MobilePhone" _delta="if_exists">
             <presentation>
                 <details>
                     <items>
-                        <item id="col:col2">
+                        <item id="costcenter_id" _delta="define">
+                            <rank>125</rank>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>125</rank>
+                        </item>
+                    </items>
+                </search>
+            </presentation>
+        </class>
+        <!-- IP Phone -->
+        <class id="IPPhone" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>105</rank>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>105</rank>
+                        </item>
+                    </items>
+                </search>
+            </presentation>
+        </class>
+        <!-- Tablet -->
+        <class id="Tablet" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </search>
+            </presentation>
+        </class>
+        <!-- Peripheral -->
+        <class id="Peripheral" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </search>
+            </presentation>
+        </class>
+        <!-- PC -->
+        <class id="PC" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col2" _delta="must_exist">
                             <items>
                                 <item id="fieldset:CostCenter" _delta="define">
                                     <rank>15</rank>
@@ -229,11 +305,11 @@
             </presentation>
         </class>
         <!-- Printer -->
-        <class id="Printer">
+        <class id="Printer" _delta="if_exists">
             <presentation>
                 <details>
                     <items>
-                        <item id="col:col2">
+                        <item id="col:col2" _delta="must_exist">
                             <items>
                                 <item id="fieldset:CostCenter" _delta="define">
                                     <rank>15</rank>
