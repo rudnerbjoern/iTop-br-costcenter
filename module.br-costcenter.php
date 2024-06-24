@@ -24,6 +24,7 @@ SetupWebPage::AddModule(
         ),
         'mandatory' => false,
         'visible' => true,
+        'auto_select' => 'SetupInfo::ModuleIsSelected("br-medicaldevice")',
 
         // Components
         //
