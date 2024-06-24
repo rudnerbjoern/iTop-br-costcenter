@@ -189,7 +189,7 @@
             </fields>
         </class>
         <!-- IP Phone -->
-        <class id="IPPhone" _delta="if_exists">
+        <class id="IPPhone">
             <presentation>
                 <details>
                     <items>
@@ -208,11 +208,11 @@
             </presentation>
         </class>
         <!-- PC -->
-        <class id="PC" _delta="if_exists">
+        <class id="PC">
             <presentation>
                 <details>
                     <items>
-                        <item id="col:col2" _delta="must_exist">
+                        <item id="col:col2">
                             <items>
                                 <item id="fieldset:CostCenter" _delta="define">
                                     <rank>15</rank>
@@ -229,11 +229,11 @@
             </presentation>
         </class>
         <!-- Printer -->
-        <class id="Printer" _delta="if_exists">
+        <class id="Printer">
             <presentation>
                 <details>
                     <items>
-                        <item id="col:col2" _delta="must_exist">
+                        <item id="col:col2">
                             <items>
                                 <item id="fieldset:CostCenter" _delta="define">
                                     <rank>15</rank>
