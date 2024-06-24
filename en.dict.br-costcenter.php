@@ -33,6 +33,8 @@ Dict::Add('EN US', 'English', 'English', array(
     'Class:CostCenter/Attribute:parent_name+' => 'Name of the parent cost center',
     'Class:CostCenter/Attribute:parent_id_friendlyname' => 'Parent',
     'Class:CostCenter/Attribute:parent_id_friendlyname+' => 'Parent cost center',
+    'Class:CostCenter/Attribute:functionalcis_list' => 'CIs',
+    'Class:CostCenter/Attribute:functionalcis_list+' => '',
     'Class:CostCenter/UniquenessRule:code_org' => 'The code must be unique',
     'Class:CostCenter/UniquenessRule:code_org+' => 'This cost center already exists',
     'Class:FunctionalCI/Attribute:costcenter_id' => 'Cost center',
