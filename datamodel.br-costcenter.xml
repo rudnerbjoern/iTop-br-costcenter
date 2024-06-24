@@ -188,6 +188,143 @@
                 </field>
             </fields>
         </class>
+        <!-- Phone -->
+        <class id="Phone" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>105</rank>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>105</rank>
+                        </item>
+                    </items>
+                </search>
+            </presentation>
+        </class>
+        <!-- Mobile Phone -->
+        <class id="MobilePhone" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>125</rank>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>125</rank>
+                        </item>
+                    </items>
+                </search>
+            </presentation>
+        </class>
+        <!-- IP Phone -->
+        <class id="IPPhone" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>105</rank>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>105</rank>
+                        </item>
+                    </items>
+                </search>
+            </presentation>
+        </class>
+        <!-- Tablet -->
+        <class id="Tablet" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </search>
+            </presentation>
+        </class>
+        <!-- Peripheral -->
+        <class id="Peripheral" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </search>
+            </presentation>
+        </class>
+        <!-- PC -->
+        <class id="PC" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col2" _delta="must_exist">
+                            <items>
+                                <item id="fieldset:CostCenter" _delta="define">
+                                    <rank>15</rank>
+                                    <items>
+                                        <item id="costcenter_id">
+                                            <rank>10</rank>
+                                        </item>
+                                    </items>
+                                </item>
+                            </items>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
+        <!-- Printer -->
+        <class id="Printer" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col2" _delta="must_exist">
+                            <items>
+                                <item id="fieldset:CostCenter" _delta="define">
+                                    <rank>15</rank>
+                                    <items>
+                                        <item id="costcenter_id">
+                                            <rank>10</rank>
+                                        </item>
+                                    </items>
+                                </item>
+                            </items>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
     </classes>
     <!-- ***************** Menus ***************** -->
     <menus>
