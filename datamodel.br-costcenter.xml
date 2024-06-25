@@ -290,11 +290,10 @@
                     <items>
                         <item id="col:col2" _delta="must_exist">
                             <items>
-                                <item id="fieldset:CostCenter" _delta="define">
-                                    <rank>15</rank>
+                                <item id="fieldset:Server:otherinfo" _delta="must_exist">
                                     <items>
-                                        <item id="costcenter_id">
-                                            <rank>10</rank>
+                                        <item id="costcenter_id" _delta="define">
+                                            <rank>5</rank>
                                         </item>
                                     </items>
                                 </item>
@@ -311,15 +310,251 @@
                     <items>
                         <item id="col:col2" _delta="must_exist">
                             <items>
-                                <item id="fieldset:CostCenter" _delta="define">
-                                    <rank>15</rank>
+                                <item id="fieldset:Server:otherinfo" _delta="must_exist">
                                     <items>
-                                        <item id="costcenter_id">
-                                            <rank>10</rank>
+                                        <item id="costcenter_id" _delta="define">
+                                            <rank>5</rank>
                                         </item>
                                     </items>
                                 </item>
                             </items>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
+        <!-- Server -->
+        <class id="Server" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col2" _delta="must_exist">
+                            <items>
+                                <item id="fieldset:Server:otherinfo" _delta="must_exist">
+                                    <items>
+                                        <item id="costcenter_id" _delta="define">
+                                            <rank>5</rank>
+                                        </item>
+                                    </items>
+                                </item>
+                            </items>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
+        <!-- NetworkDevice -->
+        <class id="NetworkDevice" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col2" _delta="must_exist">
+                            <items>
+                                <item id="fieldset:Server:otherinfo" _delta="must_exist">
+                                    <items>
+                                        <item id="costcenter_id" _delta="define">
+                                            <rank>5</rank>
+                                        </item>
+                                    </items>
+                                </item>
+                            </items>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
+        <!-- StorageSystem -->
+        <class id="StorageSystem" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col2" _delta="must_exist">
+                            <items>
+                                <item id="fieldset:Server:otherinfo" _delta="must_exist">
+                                    <items>
+                                        <item id="costcenter_id" _delta="define">
+                                            <rank>5</rank>
+                                        </item>
+                                    </items>
+                                </item>
+                            </items>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
+
+        <!-- SANSwitch -->
+        <class id="SANSwitch" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col2" _delta="must_exist">
+                            <items>
+                                <item id="fieldset:Server:otherinfo" _delta="must_exist">
+                                    <items>
+                                        <item id="costcenter_id" _delta="define">
+                                            <rank>5</rank>
+                                        </item>
+                                    </items>
+                                </item>
+                            </items>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
+        <!-- TapeLibrary -->
+        <class id="TapeLibrary" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col2" _delta="must_exist">
+                            <items>
+                                <item id="fieldset:Server:otherinfo" _delta="must_exist">
+                                    <items>
+                                        <item id="costcenter_id" _delta="define">
+                                            <rank>5</rank>
+                                        </item>
+                                    </items>
+                                </item>
+                            </items>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
+        <!-- NAS -->
+        <class id="NAS" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col2" _delta="must_exist">
+                            <items>
+                                <item id="fieldset:Server:otherinfo" _delta="must_exist">
+                                    <items>
+                                        <item id="costcenter_id" _delta="define">
+                                            <rank>5</rank>
+                                        </item>
+                                    </items>
+                                </item>
+                            </items>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
+        <!-- VirtualMachine -->
+        <class id="VirtualMachine" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col2" _delta="must_exist">
+                            <items>
+                                <item id="fieldset:Server:otherinfo" _delta="must_exist">
+                                    <items>
+                                        <item id="costcenter_id" _delta="define">
+                                            <rank>15</rank>
+                                        </item>
+                                    </items>
+                                </item>
+                            </items>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
+        <!-- Middleware -->
+        <class id="Middleware" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
+        <!-- DBServer -->
+        <class id="DBServer" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
+        <!-- WebServer -->
+        <class id="WebServer" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
+        <!-- PCSoftware -->
+        <class id="PCSoftware" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
+        <!-- OtherSoftware -->
+        <class id="OtherSoftware" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
+        <!-- MiddlewareInstance -->
+        <class id="MiddlewareInstance" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>55</rank>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
+        <!-- DatabaseSchema -->
+        <class id="DatabaseSchema" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>55</rank>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
+        </class>
+        <!-- WebApplication -->
+        <class id="WebApplication" _delta="if_exists">
+            <presentation>
+                <details>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>65</rank>
                         </item>
                     </items>
                 </details>
