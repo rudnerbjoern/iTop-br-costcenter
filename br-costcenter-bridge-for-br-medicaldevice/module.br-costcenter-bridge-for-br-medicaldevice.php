@@ -10,24 +10,24 @@
 
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'br-costcenter-bridge-for-br-peripherals/0.1.0',
+    'br-costcenter-bridge-for-br-medicaldevice/0.1.0',
     array(
         // Identification
-        'label' => 'Bridge - Costcenter + Periperals',
+        'label' => 'Bridge - Costcenter + Medicaldevice',
         'category' => 'business',
 
         // Setup
         'dependencies' => array(
             'br-costcenter/0.1.0',
-            'br-costcenter/0.1.0||br-peripherals/0.1.0',
+            'br-costcenter/0.1.0||br-medicaldevice/0.7.0',
         ),
         'mandatory' => false,
         'visible' => true,
-        'auto_select' => 'SetupInfo::ModuleIsSelected("br-costcenter") && SetupInfo::ModuleIsSelected("br-peripherals")',
+        'auto_select' => 'SetupInfo::ModuleIsSelected("br-costcenter") && SetupInfo::ModuleIsSelected("br-medicaldevice")',
 
         // Components
         'datamodel' => array(
-            'model.br-costcenter-bridge-for-br-peripherals.php'
+            'model.br-costcenter-bridge-for-br-medicaldevice.php'
         ),
         'webservice' => array(),
         'dictionary' => array(),
