@@ -301,6 +301,13 @@
                         </item>
                     </items>
                 </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </search>
             </presentation>
         </class>
         <!-- Printer -->
@@ -321,6 +328,13 @@
                         </item>
                     </items>
                 </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </search>
             </presentation>
         </class>
         <!-- Server -->
@@ -341,6 +355,13 @@
                         </item>
                     </items>
                 </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </search>
             </presentation>
         </class>
         <!-- NetworkDevice -->
@@ -361,6 +382,13 @@
                         </item>
                     </items>
                 </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </search>
             </presentation>
         </class>
         <!-- StorageSystem -->
@@ -381,6 +409,13 @@
                         </item>
                     </items>
                 </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </search>
             </presentation>
         </class>
         <!-- SANSwitch -->
@@ -401,6 +436,13 @@
                         </item>
                     </items>
                 </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </search>
             </presentation>
         </class>
         <!-- TapeLibrary -->
@@ -421,6 +463,13 @@
                         </item>
                     </items>
                 </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </search>
             </presentation>
         </class>
         <!-- NAS -->
@@ -441,6 +490,13 @@
                         </item>
                     </items>
                 </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </search>
             </presentation>
         </class>
         <!-- VirtualMachine -->
@@ -461,6 +517,13 @@
                         </item>
                     </items>
                 </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </search>
             </presentation>
         </class>
         <!-- Middleware -->
@@ -474,6 +537,13 @@
                     </items>
                 </details>
             </presentation>
+            <search>
+                <items>
+                    <item id="costcenter_id" _delta="define">
+                        <rank>95</rank>
+                    </item>
+                </items>
+            </search>
         </class>
         <!-- DBServer -->
         <class id="DBServer" _delta="if_exists">
@@ -486,6 +556,13 @@
                     </items>
                 </details>
             </presentation>
+            <search>
+                <items>
+                    <item id="costcenter_id" _delta="define">
+                        <rank>95</rank>
+                    </item>
+                </items>
+            </search>
         </class>
         <!-- WebServer -->
         <class id="WebServer" _delta="if_exists">
@@ -498,6 +575,13 @@
                     </items>
                 </details>
             </presentation>
+            <search>
+                <items>
+                    <item id="costcenter_id" _delta="define">
+                        <rank>95</rank>
+                    </item>
+                </items>
+            </search>
         </class>
         <!-- PCSoftware -->
         <class id="PCSoftware" _delta="if_exists">
@@ -510,6 +594,13 @@
                     </items>
                 </details>
             </presentation>
+            <search>
+                <items>
+                    <item id="costcenter_id" _delta="define">
+                        <rank>95</rank>
+                    </item>
+                </items>
+            </search>
         </class>
         <!-- OtherSoftware -->
         <class id="OtherSoftware" _delta="if_exists">
@@ -522,6 +613,13 @@
                     </items>
                 </details>
             </presentation>
+            <search>
+                <items>
+                    <item id="costcenter_id" _delta="define">
+                        <rank>95</rank>
+                    </item>
+                </items>
+            </search>
         </class>
         <!-- MiddlewareInstance -->
         <class id="MiddlewareInstance" _delta="if_exists">
@@ -534,6 +632,13 @@
                     </items>
                 </details>
             </presentation>
+            <search>
+                <items>
+                    <item id="costcenter_id" _delta="define">
+                        <rank>95</rank>
+                    </item>
+                </items>
+            </search>
         </class>
         <!-- DatabaseSchema -->
         <class id="DatabaseSchema" _delta="if_exists">
@@ -546,6 +651,13 @@
                     </items>
                 </details>
             </presentation>
+            <search>
+                <items>
+                    <item id="costcenter_id" _delta="define">
+                        <rank>95</rank>
+                    </item>
+                </items>
+            </search>
         </class>
         <!-- WebApplication -->
         <class id="WebApplication" _delta="if_exists">
@@ -558,6 +670,13 @@
                     </items>
                 </details>
             </presentation>
+            <search>
+                <items>
+                    <item id="costcenter_id" _delta="define">
+                        <rank>95</rank>
+                    </item>
+                </items>
+            </search>
         </class>
     </classes>
     <!-- ***************** Menus ***************** -->
