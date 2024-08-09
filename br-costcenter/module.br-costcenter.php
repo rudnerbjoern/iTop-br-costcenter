@@ -3,14 +3,14 @@
 /**
  * @copyright   Copyright (C) 2024 Björn Rudner
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
- * @version     2024-06-25
+ * @version     2024-08-09
  *
  * iTop module definition file
  */
 
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'br-costcenter/0.0.5',
+    'br-costcenter/0.1.0',
     array(
         // Identification
         //
@@ -24,7 +24,6 @@ SetupWebPage::AddModule(
         ),
         'mandatory' => false,
         'visible' => true,
-        'auto_select' => 'SetupInfo::ModuleIsSelected("br-medicaldevice")',
 
         // Components
         //
