@@ -27,7 +27,7 @@ SetupWebPage::AddModule(
 
         // Components
         'datamodel' => array(
-            'model.br-costcenter-bridge-for-br-peripherals.php'
+            'model.br-costcenter-bridge-for-br-medicaldevice.php'
         ),
         'webservice' => array(),
         'dictionary' => array(),
