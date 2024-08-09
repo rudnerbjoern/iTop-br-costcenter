@@ -383,7 +383,6 @@
                 </details>
             </presentation>
         </class>
-
         <!-- SANSwitch -->
         <class id="SANSwitch" _delta="if_exists">
             <presentation>
