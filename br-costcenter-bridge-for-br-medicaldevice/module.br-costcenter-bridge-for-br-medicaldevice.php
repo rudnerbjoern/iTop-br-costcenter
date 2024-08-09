@@ -19,10 +19,10 @@ SetupWebPage::AddModule(
         // Setup
         'dependencies' => array(
             'br-costcenter/0.1.0',
-            'br-costcenter/0.1.0||br-medicaldevice/0.6.3',
+            'br-costcenter/0.1.0||br-medicaldevice/0.7.0',
         ),
         'mandatory' => false,
-        'visible' => false,
+        'visible' => true,
         'auto_select' => 'SetupInfo::ModuleIsSelected("br-costcenter") && SetupInfo::ModuleIsSelected("br-medicaldevice")',
 
         // Components

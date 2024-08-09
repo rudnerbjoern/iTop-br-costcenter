@@ -22,7 +22,7 @@ SetupWebPage::AddModule(
             'br-costcenter/0.1.0||br-peripherals/0.1.0',
         ),
         'mandatory' => false,
-        'visible' => false,
+        'visible' => true,
         'auto_select' => 'SetupInfo::ModuleIsSelected("br-costcenter") && SetupInfo::ModuleIsSelected("br-peripherals")',
 
         // Components
