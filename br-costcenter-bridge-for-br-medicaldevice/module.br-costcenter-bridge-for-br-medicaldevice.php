@@ -10,7 +10,7 @@
 
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'br-costcenter-bridge-for-br-medicaldevice/0.1.0',
+    'br-costcenter-bridge-for-br-medicaldevice/0.3.0',
     array(
         // Identification
         'label' => 'Bridge - Costcenter + Medicaldevice',
@@ -18,8 +18,8 @@ SetupWebPage::AddModule(
 
         // Setup
         'dependencies' => array(
-            'br-costcenter/0.1.0',
-            'br-costcenter/0.1.0||br-medicaldevice/0.7.0',
+            'br-costcenter/0.3.0',
+            'br-costcenter/0.3.0||br-medicaldevice/0.7.0',
         ),
         'mandatory' => false,
         'visible' => true,
