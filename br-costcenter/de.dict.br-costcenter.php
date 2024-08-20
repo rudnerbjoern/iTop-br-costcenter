@@ -33,6 +33,8 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
     'Class:CostCenter/Attribute:parent_name+' => 'Name der übergeordneten Kostenstelle',
     'Class:CostCenter/Attribute:parent_id_friendlyname' => 'Parent',
     'Class:CostCenter/Attribute:parent_id_friendlyname+' => '',
+    'Class:CostCenter/Attribute:costcenters_list' => 'Kostenstellen',
+    'Class:CostCenter/Attribute:costcenters_list+' => 'Untergeordnete Kostenstellen',
     'Class:CostCenter/Attribute:functionalcis_list' => 'CIs',
     'Class:CostCenter/Attribute:functionalcis_list+' => 'Liste der verknüpften CIs',
     'Class:CostCenter/UniquenessRule:code_org' => 'Die Kennzahl muss eindeutig sein',

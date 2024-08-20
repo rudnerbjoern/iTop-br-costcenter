@@ -85,6 +85,10 @@
                     <extkey_attcode>parent_id</extkey_attcode>
                     <target_attcode>name</target_attcode>
                 </field>
+                <field id="costcenters_list" xsi:type="AttributeLinkedSet">
+                    <linked_class>CostCenter</linked_class>
+                    <ext_key_to_me>parent_id</ext_key_to_me>
+                </field>
                 <field id="functionalcis_list" xsi:type="AttributeLinkedSet">
                     <linked_class>FunctionalCI</linked_class>
                     <ext_key_to_me>costcenter_id</ext_key_to_me>
@@ -112,8 +116,11 @@
                         <item id="parent_id">
                             <rank>40</rank>
                         </item>
-                        <item id="functionalcis_list">
+                        <item id="costcenters_list">
                             <rank>100</rank>
+                        </item>
+                        <item id="functionalcis_list">
+                            <rank>110</rank>
                         </item>
                     </items>
                 </details>
