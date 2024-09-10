@@ -3,14 +3,14 @@
 /**
  * @copyright   Copyright (C) 2024 Björn Rudner
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
- * @version     2024-08-20
+ * @version     2024-09-10
  *
  * iTop module definition file
  */
 
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'br-costcenter/0.4.0',
+    'br-costcenter/2.7.4',
     array(
         // Identification
         //
