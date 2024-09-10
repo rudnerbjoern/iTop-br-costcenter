@@ -22,6 +22,9 @@
                     </attributes>
                 </naming>
                 <icon>images/costcenter.png</icon>
+                <style>
+                    <icon>images/costcenter.svg</icon>
+                </style>
                 <reconciliation>
                     <attributes>
                         <attribute id="code" />
