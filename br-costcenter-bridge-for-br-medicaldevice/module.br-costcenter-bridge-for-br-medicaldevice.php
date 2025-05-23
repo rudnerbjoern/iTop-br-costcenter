@@ -1,16 +1,16 @@
 <?php
 
 /**
- * @copyright   Copyright (C) 2024 Björn Rudner
+ * @copyright   Copyright (C) 2024-2025 Björn Rudner
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
- * @version     2024-09-10
+ * @version     2025-05-23
  *
  * iTop module definition file
  */
 
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'br-costcenter-bridge-for-br-medicaldevice/3.1.4',
+    'br-costcenter-bridge-for-br-medicaldevice/3.1.5',
     array(
         // Identification
         'label' => 'Bridge - Costcenter + Medicaldevice',
@@ -19,8 +19,8 @@ SetupWebPage::AddModule(
         // Setup
         'dependencies' => array(
             'itop-config-mgmt/3.1.0',
-            'br-costcenter/3.1.4',
-            'br-costcenter/3.1.4||br-medicaldevice/3.1.10',
+            'br-costcenter/3.1.5',
+            'br-costcenter/3.1.5||br-medicaldevice/3.1.10',
         ),
         'mandatory' => false,
         'visible' => true,
