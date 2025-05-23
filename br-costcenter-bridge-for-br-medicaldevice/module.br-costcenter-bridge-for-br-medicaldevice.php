@@ -20,7 +20,7 @@ SetupWebPage::AddModule(
         'dependencies' => array(
             'itop-config-mgmt/3.1.0',
             'br-costcenter/3.1.4',
-            'br-costcenter/3.1.4||br-medicaldevice/3.1.9',
+            'br-costcenter/3.1.4||br-medicaldevice/3.1.10',
         ),
         'mandatory' => false,
         'visible' => true,
