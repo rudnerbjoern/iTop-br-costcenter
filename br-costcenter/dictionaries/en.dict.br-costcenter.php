@@ -8,6 +8,7 @@
  * Localized data
  */
 
+/** @disregard P1009 Undefined type Dict */
 Dict::Add('EN US', 'English', 'English', array(
     'Menu:CostCenter' => 'Cost Centers',
     'Menu:CostCenter+' => 'Cost Centers',

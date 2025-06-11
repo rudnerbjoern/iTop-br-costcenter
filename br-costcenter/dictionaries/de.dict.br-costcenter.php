@@ -8,6 +8,7 @@
  * Localized data
  */
 
+/** @disregard P1009 Undefined type Dict */
 Dict::Add('DE DE', 'German', 'Deutsch', array(
     'Menu:CostCenter' => 'Kostenstellen',
     'Menu:CostCenter+' => 'Kostenstellen',
@@ -38,7 +39,7 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
     'Class:CostCenter/Attribute:functionalcis_list' => 'CIs',
     'Class:CostCenter/Attribute:functionalcis_list+' => 'Liste der verknüpften CIs',
     'Class:CostCenter/UniquenessRule:code_org' => 'Die Kennzahl muss eindeutig sein',
-    'Class:CostCenter/UniquenessRule:code_org+' => 'Eine Kostenstelle mit dier Kennzahl existiert bereits',
+    'Class:CostCenter/UniquenessRule:code_org+' => 'Eine Kostenstelle mit dieser Kennzahl existiert bereits',
     'Class:FunctionalCI/Attribute:costcenter_id' => 'Kostenstelle',
     'Class:FunctionalCI/Attribute:costcenter_id+' => 'Kostenstelle',
     'Class:FunctionalCI/Attribute:costcenter_name' => 'Name der Kostenstelle',
