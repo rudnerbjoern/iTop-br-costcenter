@@ -37,12 +37,12 @@
             <presentation>
                 <details>
                     <items>
-                        <item id="col:col3" _delta="must_exist">
+                        <item id="col:col1" _delta="must_exist">
                             <items>
-                                <item id="fieldset:Ticket:relation" _delta="must_exist">
+                                <item id="fieldset:Ticket:moreinfo" _delta="must_exist">
                                     <items>
                                         <item id="costcenter_id" _delta="define">
-                                            <rank>2</rank>
+                                            <rank>22</rank>
                                         </item>
                                     </items>
                                 </item>
