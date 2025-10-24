@@ -14,15 +14,15 @@ SetupWebPage::AddModule(
     'br-costcenter-bridge-for-combodo-pmp-light/3.2.1',
     array(
         // Identification
-        'label' => 'Costcenter Bridge: PMP Light',
+        'label' => 'Bridge for Costcenter and Project management light',
         'category' => 'business',
 
         // Setup
         'dependencies' => array(
             'itop-config-mgmt/3.2.0',
+            'br-costcenter-bridge-for-itop-tickets/3.2.1',
             'combodo-pmp-light/1.1.0',
             'br-costcenter/3.2.1',
-            'br-costcenter/3.2.1||combodo-pmp-light/1.1.0',
         ),
         'mandatory' => false,
         'visible' => true,

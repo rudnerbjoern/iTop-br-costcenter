@@ -14,7 +14,7 @@ SetupWebPage::AddModule(
     'br-costcenter-bridge-for-br-medicaldevice/3.2.1',
     array(
         // Identification
-        'label' => 'Costcenter Bridge: Medicaldevice',
+        'label' => 'Bridge for Costcenter and Medicaldevice',
         'category' => 'business',
 
         // Setup
