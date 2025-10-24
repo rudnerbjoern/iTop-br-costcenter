@@ -11,41 +11,33 @@
 /** @disregard P1009 Undefined type SetupWebPage */
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'br-costcenter/3.2.2',
+    'br-costcenter-bridge-for-itop-tickets/3.2.2',
     array(
         // Identification
-        //
-        'label' => 'Datamodel: Cost Center',
+        'label' => 'Bridge for Costcenter and iTop Tickets Management',
         'category' => 'business',
 
         // Setup
-        //
         'dependencies' => array(
-            'itop-config-mgmt/3.2.0',
+            'itop-tickets/3.2.0',
+            'br-costcenter/3.2.2',
         ),
         'mandatory' => false,
         'visible' => true,
+        'auto_select' => 'SetupInfo::ModuleIsSelected("br-costcenter") && SetupInfo::ModuleIsSelected("itop-tickets")',
 
         // Components
-        //
         'datamodel' => array(),
         'webservice' => array(),
-        'data.struct' => array(
-            // add your 'structure' definition XML files here,
-        ),
-        'data.sample' => array(
-            // add your sample data XML files here,
-        ),
+        'dictionary' => array(),
+        'data.struct' => array(),
+        'data.sample' => array(),
 
         // Documentation
-        //
-        'doc.manual_setup' => '', // hyperlink to manual setup documentation, if any
-        'doc.more_information' => '', // hyperlink to more information, if any
+        'doc.manual_setup' => '',
+        'doc.more_information' => '',
 
         // Default settings
-        //
-        'settings' => array(
-            // Module specific settings go here, if any
-        ),
+        'settings' => array(),
     )
 );

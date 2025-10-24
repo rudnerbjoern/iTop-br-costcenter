@@ -5,10 +5,10 @@
     * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
     -->
     <classes>
-        <class id="UserRequest" _delta="must_exist">
+        <class id="Project" _delta="must_exist">
             <lifecycle>
                 <states>
-                    <state id="resolved" _delta="must_exist">
+                    <state id="closed" _delta="must_exist">
                         <flags>
                             <attribute id="costcenter_id" _delta="define">
                                 <read_only />
@@ -20,12 +20,12 @@
             <presentation>
                 <details>
                     <items>
-                        <item id="col:col1" _delta="must_exist">
+                        <item id="col:col0" _delta="must_exist">
                             <items>
-                                <item id="fieldset:Ticket:moreinfo" _delta="must_exist">
+                                <item id="fieldset:Project:Budget" _delta="must_exist">
                                     <items>
                                         <item id="costcenter_id" _delta="define">
-                                            <rank>22</rank>
+                                            <rank>07</rank>
                                         </item>
                                     </items>
                                 </item>
@@ -36,7 +36,7 @@
                 <search>
                     <items>
                         <item id="costcenter_id" _delta="define">
-                            <rank>251</rank>
+                            <rank>221</rank>
                         </item>
                     </items>
                 </search>
