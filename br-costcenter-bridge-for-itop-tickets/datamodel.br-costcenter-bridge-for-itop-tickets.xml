@@ -26,14 +26,14 @@
             <presentation>
                 <details>
                     <items>
-                        <item id="costcenter_id">
+                        <item id="costcenter_id" _delta="define">
                             <rank>115</rank>
                         </item>
                     </items>
                 </details>
                 <search>
                     <items>
-                        <item id="costcenter_id">
+                        <item id="costcenter_id" _delta="define">
                             <rank>115</rank>
                         </item>
                     </items>
