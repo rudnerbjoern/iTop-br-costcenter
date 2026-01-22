@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design version="3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://rudnerbjoern.github.io/iTop-schema/3.2/itop_design.xsd">
+    <!--
+    * @copyright   Copyright (C) 2024-2025 Björn Rudner
+    * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
+    -->
+    <classes>
+        <!-- ***************** OrderRequest ***************** -->
+        <class id="OrderRequest" _delta="must_exist">
+            <fields>
+                <!--
+                <field id="costcenter_id" xsi:type="AttributeExternalKey" _delta="must_exist">
+                    <dependencies>
+                        <attribute id="request_type_id" _delta="define" />
+                    </dependencies>
+                </field>
+                -->
+            </fields>
+            <lifecycle>
+                <states>
+                    <state id="submitted" _delta="must_exist">
+                        <flags>
+                            <attribute id="costcenter_id">
+                                <read_only />
+                            </attribute>
+                        </flags>
+                    </state>
+                </states>
+            </lifecycle>
+            <event_listeners>
+                <event_listener id="OnOrderRequestComputeValuesCostCenter">
+                    <event>EVENT_DB_COMPUTE_VALUES</event>
+                    <callback>OnOrderRequestComputeValuesCostCenter</callback>
+                    <rank>20</rank>
+                </event_listener>
+            </event_listeners>
+            <methods>
+                <method id="OnOrderRequestComputeValuesCostCenter">
+                    <type>EventListener</type>
+                    <access>public</access>
+                    <static>false</static>
+                    <code><![CDATA[
+    public function OnOrderRequestComputeValuesCostCenter(Combodo\iTop\Service\Events\EventData $oEventData)
+    {
+        // Skip if no request type selected
+        $iTypeId = (int) $this->Get('request_type_id');
+        if ($iTypeId <= 0) {
+            return;
+        }
+
+        // Only set if empty OR type has just changed
+        $aChanges = $this->ListChanges();
+        $bTypeChanged = array_key_exists('request_type_id', $aChanges);
+        $iCurrentCostCenter = (int) $this->Get('costcenter_id');
+        if (!$bTypeChanged && $iCurrentCostCenter > 0) {
+            return;
+        }
+
+        // Read default cost center from the selected type
+        $oType = MetaModel::GetObject('OrderRequestType', $iTypeId, false);
+        if (!$oType) {
+            return;
+        }
+        $iDefault = (int) $oType->Get('default_costcenter_id');
+
+        if ($iDefault > 0) {
+            $this->Set('costcenter_id', $iDefault);
+        } else {
+            // If the type provides no default and the type was changed, clear the field
+            if ($bTypeChanged) {
+                $this->Set('costcenter_id', null);
+            }
+        }
+    }]]></code>
+                </method>
+            </methods>
+            <presentation>
+                <details>
+                    <items>
+                        <item id="col:col1" _delta="must_exist">
+                            <items>
+                                <item id="fieldset:OrderRequest:costs" _delta="must_exist">
+                                    <items>
+                                        <item id="costcenter_id" _delta="define">
+                                            <rank>15</rank>
+                                        </item>
+                                    </items>
+                                </item>
+                            </items>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="costcenter_id" _delta="define">
+                            <rank>95</rank>
+                        </item>
+                    </items>
+                </search>
+            </presentation>
+        </class>
+        <!-- ***************** OrderRequestType ***************** -->
+        <class id="OrderRequestType" _delta="must_exist">
+            <fields>
+                <field id="default_costcenter_id" xsi:type="AttributeExternalKey" _delta="define">
+                    <sql>default_costcenter_id</sql>
+                    <target_class>CostCenter</target_class>
+                    <is_null_allowed>true</is_null_allowed>
+                    <on_target_delete>DEL_MANUAL</on_target_delete>
+                    <allow_target_creation>false</allow_target_creation>
+                    <dependencies>
+                        <attribute id="org_id" />
+                    </dependencies>
+                    <filter><![CDATA[SELECT cc FROM CostCenter AS cc JOIN Organization AS root ON cc.org_id=root.id JOIN Organization AS child ON child.parent_id BELOW root.id WHERE child.id= :this->org_id]]></filter>
+                </field>
+                <field id="default_costcenter_name" xsi:type="AttributeExternalField" _delta="define">
+                    <extkey_attcode>default_costcenter_id</extkey_attcode>
+                    <target_attcode>name</target_attcode>
+                </field>
+            </fields>
+            <presentation>
+                <details>
+                    <items>
+                        <item id="default_costcenter_id" _delta="define">
+                            <rank>65</rank>
+                        </item>
+                    </items>
+                </details>
+                <search>
+                    <items>
+                        <item id="default_costcenter_id" _delta="define">
+                            <rank>65</rank>
+                        </item>
+                    </items>
+                </search>
+            </presentation>
+        </class>
+    </classes>
+</itop_design>
