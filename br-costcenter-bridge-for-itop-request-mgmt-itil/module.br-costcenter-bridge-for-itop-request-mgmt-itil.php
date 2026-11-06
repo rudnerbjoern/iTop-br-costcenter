@@ -10,7 +10,7 @@
 /** @disregard P1009 Undefined type SetupWebPage */
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'br-costcenter-bridge-for-itop-request-mgmt-itil/3.2.2',
+    'br-costcenter-bridge-for-itop-request-mgmt-itil/3.2.3',
     array(
         // Identification
         'label' => 'Bridge for Costcenter and iTop User request Management ITIL',
@@ -19,8 +19,8 @@ SetupWebPage::AddModule(
         // Setup
         'dependencies' => array(
             'itop-request-mgmt-itil/3.2.1',
-            'br-costcenter/3.2.2',
-            'br-costcenter-bridge-for-itop-tickets/3.2.2',
+            'br-costcenter/3.2.3',
+            'br-costcenter-bridge-for-itop-tickets/3.2.3',
         ),
         'mandatory' => false,
         'visible' => true,
