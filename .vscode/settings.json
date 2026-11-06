@@ -1,20 +1,25 @@
 {
     "cSpell.words": [
         "Analyser",
+        "Combodo",
+        "POCT",
+        "Rudner",
         "attcode",
         "autoincrement",
         "bizmodel",
         "cmdb",
         "costcenter",
         "costcenters",
+        "datacenter",
         "extkey",
         "fieldset",
         "friendlyname",
         "functionalcis",
+        "itop",
         "medicaldevice",
         "mgmt",
-        "otherinfo",
-        "POCT"
+        "moreinfo",
+        "otherinfo"
     ],
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "modificationsIfAvailable",
