@@ -99,9 +99,9 @@ $bridgePath = 'br-costcenter-bridge-for-br-orderrequest/module.br-costcenter-bri
 $missing = $projectContents;
 unset($missing[$bridgePath]);
 $invalid = $projectContents;
-$invalid[$bridgePath] = str_replace('br-costcenter/3.2.2', 'br-costcenter/invalid', $invalid[$bridgePath]);
+$invalid[$bridgePath] = str_replace('br-costcenter/' . $current, 'br-costcenter/invalid', $invalid[$bridgePath]);
 $newer = $projectContents;
-$newer[$bridgePath] = str_replace('br-costcenter-bridge-for-br-orderrequest/0.0.1', 'br-costcenter-bridge-for-br-orderrequest/99.0.0', $newer[$bridgePath]);
+$newer[$bridgePath] = preg_replace("~'br-costcenter-bridge-for-br-orderrequest/[^']+'~", "'br-costcenter-bridge-for-br-orderrequest/99.0.0'", $newer[$bridgePath]);
 foreach (['reject missing bridge module' => $missing, 'reject malformed internal dependency' => $invalid,
     'reject target older than a bridge' => $newer] as $name => $contents) {
     $tests[$name] = static function () use ($contents, $next): void {
