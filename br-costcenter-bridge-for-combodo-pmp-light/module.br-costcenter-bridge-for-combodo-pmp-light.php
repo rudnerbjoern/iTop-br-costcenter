@@ -19,7 +19,7 @@ SetupWebPage::AddModule(
         // Setup
         'dependencies' => array(
             'itop-config-mgmt/3.2.0',
-            'combodo-pmp-light/1.1.0',
+            'br-costcenter/3.2.3||combodo-pmp-light/1.1.0',
             'br-costcenter/3.2.3',
             'br-costcenter-bridge-for-itop-tickets/3.2.3',
         ),

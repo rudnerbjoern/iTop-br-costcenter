@@ -43,6 +43,21 @@ function prepareReleaseContents(string $manifest, string $module, string $versio
             throw new RuntimeException('Expected one version and release_date in the cost center extension manifest.');
         }
         $currentVersion = trim((string) $xml->version);
+        $moduleIds = [];
+        foreach ($xml->modules->module as $entry) {
+            $id = (string) $entry->id;
+            if (count($entry->id) !== 1 || count($entry->version) !== 1
+                || (string) $entry->version !== $currentVersion) {
+                throw new RuntimeException('Manifest module versions must match the extension version.');
+            }
+            $moduleIds[] = $id;
+        }
+        $expectedIds = releaseModuleIds();
+        sort($moduleIds);
+        sort($expectedIds);
+        if ($moduleIds !== $expectedIds) {
+            throw new RuntimeException('Manifest must list each release module exactly once.');
+        }
     } finally {
         libxml_clear_errors();
         libxml_use_internal_errors($previous);
@@ -65,8 +80,9 @@ function prepareReleaseContents(string $manifest, string $module, string $versio
             -1,
             $count
         );
-        if ($manifest === null || $count !== 1) {
-            throw new RuntimeException('Expected exactly one editable ' . $element . ' element.');
+        $expectedCount = $element === 'version' ? count(releaseModuleIds()) + 1 : 1;
+        if ($manifest === null || $count !== $expectedCount) {
+            throw new RuntimeException('Unexpected number of editable ' . $element . ' elements.');
         }
     }
     $module = preg_replace_callback(

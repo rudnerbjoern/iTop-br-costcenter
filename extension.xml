@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension format="1.0">
-    <extension_code>
-        <![CDATA[br-costcenter]]>
-    </extension_code>
+    <extension_code>br-costcenter</extension_code>
     <company>
         <![CDATA[]]>
     </company>
@@ -16,6 +14,14 @@
         <![CDATA[Adds the ability to assign CIs to Cost Centers]]>
     </description>
     <version><![CDATA[3.2.3]]></version>
+    <modules>
+        <module><id>br-costcenter</id><version>3.2.3</version></module>
+        <module><id>br-costcenter-bridge-for-br-medicaldevice</id><version>3.2.3</version></module>
+        <module><id>br-costcenter-bridge-for-br-orderrequest</id><version>3.2.3</version></module>
+        <module><id>br-costcenter-bridge-for-combodo-pmp-light</id><version>3.2.3</version></module>
+        <module><id>br-costcenter-bridge-for-itop-request-mgmt-itil</id><version>3.2.3</version></module>
+        <module><id>br-costcenter-bridge-for-itop-tickets</id><version>3.2.3</version></module>
+    </modules>
     <release_date><![CDATA[2026-11-06]]></release_date>
     <version_description>
         <![CDATA[]]>

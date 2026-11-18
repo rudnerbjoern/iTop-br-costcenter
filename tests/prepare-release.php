@@ -21,6 +21,11 @@ $tests = [
                 !== preg_replace('~<(version|release_date)>.*?</\1>~s', '', $manifest)) {
             throw new RuntimeException('Unexpected release metadata or unrelated edits.');
         }
+        foreach ($xml->modules->module as $entry) {
+            if ((string) $entry->version !== $next) {
+                throw new RuntimeException('Manifest module version was not updated: ' . $entry->id);
+            }
+        }
     },
 ];
 
@@ -33,6 +38,9 @@ $cases = [
     'reject ambiguous module version' => [$manifest, $module . $module, $next, '2028-02-29'],
     'reject mismatched module version' => [$manifest, str_replace("'br-costcenter/$current'", "'br-costcenter/0.0.0'", $module), $next, '2028-02-29'],
     'reject missing date element' => [preg_replace('~<release_date>.*?</release_date>~s', '', $manifest), $module, $next, '2028-02-29'],
+    'reject mismatched manifest module version' => [preg_replace('~(<module><id>br-costcenter</id><version>).*?(</version>)~', '${1}0.0.0$2', $manifest, 1), $module, $next, '2028-02-29'],
+    'reject missing manifest module' => [preg_replace('~\s*<module><id>br-costcenter</id>.*?</module>~s', '', $manifest, 1), $module, $next, '2028-02-29'],
+    'reject duplicate manifest module' => [str_replace('<id>br-costcenter-bridge-for-br-medicaldevice</id>', '<id>br-costcenter</id>', $manifest), $module, $next, '2028-02-29'],
 ];
 foreach ($cases as $name => $arguments) {
     $tests[$name] = static function () use ($arguments): void {
