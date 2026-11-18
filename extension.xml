@@ -13,16 +13,16 @@
     <description>
         <![CDATA[Adds the ability to assign CIs to Cost Centers]]>
     </description>
-    <version><![CDATA[3.2.3]]></version>
+    <version><![CDATA[3.2.4]]></version>
     <modules>
-        <module><id>br-costcenter</id><version>3.2.3</version></module>
-        <module><id>br-costcenter-bridge-for-br-medicaldevice</id><version>3.2.3</version></module>
-        <module><id>br-costcenter-bridge-for-br-orderrequest</id><version>3.2.3</version></module>
-        <module><id>br-costcenter-bridge-for-combodo-pmp-light</id><version>3.2.3</version></module>
-        <module><id>br-costcenter-bridge-for-itop-request-mgmt-itil</id><version>3.2.3</version></module>
-        <module><id>br-costcenter-bridge-for-itop-tickets</id><version>3.2.3</version></module>
+        <module><id>br-costcenter</id><version><![CDATA[3.2.4]]></version></module>
+        <module><id>br-costcenter-bridge-for-br-medicaldevice</id><version><![CDATA[3.2.4]]></version></module>
+        <module><id>br-costcenter-bridge-for-br-orderrequest</id><version><![CDATA[3.2.4]]></version></module>
+        <module><id>br-costcenter-bridge-for-combodo-pmp-light</id><version><![CDATA[3.2.4]]></version></module>
+        <module><id>br-costcenter-bridge-for-itop-request-mgmt-itil</id><version><![CDATA[3.2.4]]></version></module>
+        <module><id>br-costcenter-bridge-for-itop-tickets</id><version><![CDATA[3.2.4]]></version></module>
     </modules>
-    <release_date><![CDATA[2026-11-06]]></release_date>
+    <release_date><![CDATA[2026-11-18]]></release_date>
     <version_description>
         <![CDATA[]]>
     </version_description>
