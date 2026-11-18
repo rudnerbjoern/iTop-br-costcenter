@@ -14,7 +14,7 @@
         <![CDATA[Adds the ability to assign CIs to Cost Centers]]>
     </description>
     <version><![CDATA[3.2.4]]></version>
-    <modules>
+    <modules type="array">
         <module><id>br-costcenter</id><version><![CDATA[3.2.4]]></version></module>
         <module><id>br-costcenter-bridge-for-br-medicaldevice</id><version><![CDATA[3.2.4]]></version></module>
         <module><id>br-costcenter-bridge-for-br-orderrequest</id><version><![CDATA[3.2.4]]></version></module>

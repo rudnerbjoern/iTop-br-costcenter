@@ -12,6 +12,12 @@ foreach (glob(__DIR__ . '/../br-costcenter*/datamodel.*.xml') as $model) {
 }
 
 $tests = [];
+$tests['extension modules are declared as an iTop array'] = static function (): void {
+    $manifest = simplexml_load_file(__DIR__ . '/../extension.xml', SimpleXMLElement::class, LIBXML_NONET);
+    if ($manifest === false || (string) $manifest->modules['type'] !== 'array') {
+        throw new RuntimeException('Extension modules must be declared as an array for iTop.');
+    }
+};
 foreach ($documents as $name => [$documentPath, $schemaPath]) {
     $tests[$name] = static function () use ($schemaDirectory, $documentPath, $schemaPath): void {
         $schema = $schemaDirectory . '/' . $schemaPath;
