@@ -1,3 +1,11 @@
+## iTop 3.3 compatibility
+
+The 3.3.x series requires iTop 3.3.0 or later. For iTop 3.2, use a 3.2.x
+release or the [iTop 3.2 maintenance branch](https://github.com/rudnerbjoern/iTop-br-costcenter/tree/itop/3.2).
+
+With version 3.3.0, you can assign cost centers to persons and teams and use
+the **Cost center** filter in contact, person, and team searches.
+
 ## 📦 Installation
 
 1. Download the `br-costcenter-vX.Y.Z.zip` asset attached to this release.
