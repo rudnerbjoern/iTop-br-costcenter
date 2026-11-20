@@ -8,14 +8,15 @@ $documents = [
 ];
 foreach (glob(__DIR__ . '/../br-costcenter*/datamodel.*.xml') as $model) {
     $path = basename(dirname($model)) . '/' . basename($model);
-    $documents[$path . ' matches the iTop 3.2 XSD'] = [$path, '3.2/itop_design.xsd'];
+    $documents[$path . ' matches the iTop 3.3 XSD'] = [$path, '3.3/itop_design.xsd'];
 }
 
 $tests = [];
-$tests['extension modules are declared as an iTop array'] = static function (): void {
+$tests['extension requires iTop 3.3.0 and declares modules as an iTop array'] = static function (): void {
     $manifest = simplexml_load_file(__DIR__ . '/../extension.xml', SimpleXMLElement::class, LIBXML_NONET);
-    if ($manifest === false || (string) $manifest->modules['type'] !== 'array') {
-        throw new RuntimeException('Extension modules must be declared as an array for iTop.');
+    if ($manifest === false || trim((string) $manifest->itop_version_min) !== '3.3.0'
+        || (string) $manifest->modules['type'] !== 'array') {
+        throw new RuntimeException('Expected iTop 3.3.0 as the minimum and an array of modules.');
     }
 };
 foreach ($documents as $name => [$documentPath, $schemaPath]) {

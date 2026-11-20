@@ -4,7 +4,7 @@ Set up the local schemas as described in [the test instructions](../tests/README
 then run from the repository root:
 
 ```sh
-php scripts/prepare-release.php 3.2.3
+php scripts/prepare-release.php 3.3.1
 ```
 
 This updates the extension manifest version, all six module registration versions and internal dependency versions, and
@@ -12,7 +12,7 @@ manifest release date together, then runs `tests/run.php`. The default date uses
 Europe/Berlin. Supply a date explicitly when needed:
 
 ```sh
-php scripts/prepare-release.php 3.2.3 2026-11-06
+php scripts/prepare-release.php 3.3.1 2026-11-06
 ```
 
 The version must be newer than the existing version and use `X.Y.Z` format.
@@ -32,7 +32,7 @@ If tests fail, the command exits unsuccessfully and retains the version edits
 for inspection. Resolve failures before publishing. The script does not stage,
 commit, push, tag, or publish anything.
 
-Use a release branch named `release/<version>`, for example `release/3.2.3`,
+Use a release branch named `release/<version>`, for example `release/3.3.1`,
 for this preparation. Review the diff, commit on that branch, and open a PR
 into `main`. PR CI requires the branch version to match the manifest and all module versions.
 

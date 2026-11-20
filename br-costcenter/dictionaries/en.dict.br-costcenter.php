@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @copyright   Copyright (C) 2024-2025 Björn Rudner
+ * @copyright   Copyright (C) 2024-2026 Björn Rudner
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
  *
  * Localized data
@@ -39,6 +39,8 @@ Dict::Add('EN US', 'English', 'English', array(
     'Class:CostCenter/Attribute:functionalcis_list+' => '',
     'Class:CostCenter/UniquenessRule:code_org' => 'The code must be unique',
     'Class:CostCenter/UniquenessRule:code_org+' => 'This cost center already exists',
+    'Class:Contact/Attribute:costcenter_id' => 'Cost center',
+    'Class:Contact/Attribute:costcenter_id+' => 'Cost center',
     'Class:FunctionalCI/Attribute:costcenter_id' => 'Cost center',
     'Class:FunctionalCI/Attribute:costcenter_id+' => 'Cost center',
     'Class:FunctionalCI/Attribute:costcenter_name' => 'Cost center name',

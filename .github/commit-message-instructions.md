@@ -1,6 +1,6 @@
 # Commit-message generation
 
-Generate a message only for the staged change in this iTop 3.2 cost center extension project.
+Generate a message only for the staged change in this iTop 3.3 cost center extension project.
 Use English and this header:
 
 ```text

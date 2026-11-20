@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @copyright   Copyright (C) 2024-2025 Björn Rudner
+ * @copyright   Copyright (C) 2024-2026 Björn Rudner
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
  *
  * Localized data
@@ -39,6 +39,8 @@ Dict::Add('DE DE', 'German', 'Deutsch', array(
     'Class:CostCenter/Attribute:functionalcis_list+' => 'Liste der verknüpften CIs',
     'Class:CostCenter/UniquenessRule:code_org' => 'Die Kennzahl muss eindeutig sein',
     'Class:CostCenter/UniquenessRule:code_org+' => 'Eine Kostenstelle mit dieser Kennzahl existiert bereits',
+    'Class:Contact/Attribute:costcenter_id' => 'Kostenstelle',
+    'Class:Contact/Attribute:costcenter_id+' => 'Kostenstelle',
     'Class:FunctionalCI/Attribute:costcenter_id' => 'Kostenstelle',
     'Class:FunctionalCI/Attribute:costcenter_id+' => 'Kostenstelle',
     'Class:FunctionalCI/Attribute:costcenter_name' => 'Name der Kostenstelle',

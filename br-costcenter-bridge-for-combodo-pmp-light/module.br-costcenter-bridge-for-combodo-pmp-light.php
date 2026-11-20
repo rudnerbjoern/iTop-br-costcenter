@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @copyright   Copyright (C) 2024-2025 Björn Rudner
+ * @copyright   Copyright (C) 2024-2026 Björn Rudner
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
  *
  * iTop module definition file
@@ -10,7 +10,7 @@
 /** @disregard P1009 Undefined type SetupWebPage */
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'br-costcenter-bridge-for-combodo-pmp-light/3.2.5',
+    'br-costcenter-bridge-for-combodo-pmp-light/3.3.0',
     array(
         // Identification
         'label' => 'Bridge for Costcenter and Project management light',
@@ -18,10 +18,10 @@ SetupWebPage::AddModule(
 
         // Setup
         'dependencies' => array(
-            'itop-config-mgmt/3.2.0',
-            'br-costcenter/3.2.5||combodo-pmp-light/1.1.0',
-            'br-costcenter/3.2.5',
-            'br-costcenter-bridge-for-itop-tickets/3.2.5',
+            'itop-config-mgmt/3.3.0',
+            'br-costcenter/3.3.0||combodo-pmp-light/1.1.0',
+            'br-costcenter/3.3.0',
+            'br-costcenter-bridge-for-itop-tickets/3.3.0',
         ),
         'mandatory' => false,
         'visible' => true,
