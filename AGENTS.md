@@ -5,7 +5,7 @@ Treat MUST and MUST NOT as mandatory requirements.
 
 ## Project identity and scope
 
-- You MUST treat this repository as `iTop-br-costcenter`, an iTop 3.2
+- You MUST treat this repository as `iTop-br-costcenter`, an iTop 3.3
   extension for hierarchical cost centers, CI assignments, and bridges for tickets,
   user requests, projects, medical devices, and order requests.
 - You MUST derive branch names, commit messages, and pull request content from
@@ -36,7 +36,7 @@ Treat MUST and MUST NOT as mandatory requirements.
   letters, digits, and hyphens in the description.
 - For release preparation, you MUST instead use `release/<version>`, where
   `<version>` is the target version in `X.Y.Z` format without a `v` prefix,
-  for example `release/3.2.3`. This is an explicit exception to the description
+  for example `release/3.3.1`. This is an explicit exception to the description
   format above. You MUST NOT use `build/` or `chore/` for release preparation.
 - You MUST select exactly one prefix according to the primary task outcome:
 

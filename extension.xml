@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<extension format="1.0">
+<extension format="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://rudnerbjoern.github.io/iTop-schema/extension.xsd">
     <extension_code>br-costcenter</extension_code>
     <company>
         <![CDATA[]]>
@@ -11,23 +11,23 @@
         <![CDATA[Datamodel: Cost Center]]>
     </label>
     <description>
-        <![CDATA[Adds the ability to assign CIs to Cost Centers]]>
+        <![CDATA[Assign cost centers to configuration items, persons, and teams]]>
     </description>
-    <version><![CDATA[3.2.5]]></version>
+    <version><![CDATA[3.3.0]]></version>
     <modules type="array">
-        <module><id>br-costcenter</id><version><![CDATA[3.2.5]]></version></module>
-        <module><id>br-costcenter-bridge-for-br-medicaldevice</id><version><![CDATA[3.2.5]]></version></module>
-        <module><id>br-costcenter-bridge-for-br-orderrequest</id><version><![CDATA[3.2.5]]></version></module>
-        <module><id>br-costcenter-bridge-for-combodo-pmp-light</id><version><![CDATA[3.2.5]]></version></module>
-        <module><id>br-costcenter-bridge-for-itop-request-mgmt-itil</id><version><![CDATA[3.2.5]]></version></module>
-        <module><id>br-costcenter-bridge-for-itop-tickets</id><version><![CDATA[3.2.5]]></version></module>
+        <module><id>br-costcenter</id><version><![CDATA[3.3.0]]></version></module>
+        <module><id>br-costcenter-bridge-for-br-medicaldevice</id><version><![CDATA[3.3.0]]></version></module>
+        <module><id>br-costcenter-bridge-for-br-orderrequest</id><version><![CDATA[3.3.0]]></version></module>
+        <module><id>br-costcenter-bridge-for-combodo-pmp-light</id><version><![CDATA[3.3.0]]></version></module>
+        <module><id>br-costcenter-bridge-for-itop-request-mgmt-itil</id><version><![CDATA[3.3.0]]></version></module>
+        <module><id>br-costcenter-bridge-for-itop-tickets</id><version><![CDATA[3.3.0]]></version></module>
     </modules>
-    <release_date><![CDATA[2026-11-18]]></release_date>
+    <release_date><![CDATA[2026-11-20]]></release_date>
     <version_description>
-        <![CDATA[]]>
+        <![CDATA[Updated the data model for iTop 3.3.0, now the minimum supported version. Added cost center assignment for persons and teams and a cost center filter to contact searches. Replaced the cost center icon with a new SVG.]]>
     </version_description>
     <itop_version_min>
-        <![CDATA[3.2.0]]>
+        <![CDATA[3.3.0]]>
     </itop_version_min>
     <status>stable</status>
     <mandatory>false</mandatory>

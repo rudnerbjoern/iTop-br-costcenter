@@ -57,6 +57,49 @@ namespace CostCenterTests {
             }
         }
     };
+    $tests['cost center uses the iTop 3.3 detail fieldsets'] = static function () use ($model): void {
+        $fieldsets = [
+            'ConfigMgmt' => ['PC', 'Printer', 'StorageSystem', 'SANSwitch'],
+            'Server' => ['Server', 'NetworkDevice', 'TapeLibrary', 'NAS', 'VirtualMachine'],
+        ];
+        foreach ($fieldsets as $prefix => $classes) {
+            foreach ($classes as $class) {
+                $path = '//class[@id="' . $class . '"]/presentation/details/items/item[@id="col:col2"]'
+                    . '/items/item[@id="fieldset:' . $prefix . ':otherinfo"]/items/item[@id="costcenter_id"]';
+                if (count($model->xpath($path)) !== 1) {
+                    throw new \RuntimeException('Unexpected cost center fieldset for ' . $class);
+                }
+            }
+        }
+    };
+    $tests['persons and teams use the shared contact cost center'] = static function () use ($model): void {
+        $contactField = $model->xpath('//class[@id="Contact"]/fields/field[@id="costcenter_id"]');
+        $ciField = $model->xpath('//class[@id="FunctionalCI"]/fields/field[@id="costcenter_id"]');
+        $xsi = 'http://www.w3.org/2001/XMLSchema-instance';
+        if (count($contactField) !== 1 || count($ciField) !== 1
+            || (string) $contactField[0]->attributes($xsi)['type'] !== 'AttributeExternalKey'
+            || (string) $contactField[0]->target_class !== 'CostCenter'
+            || (string) $contactField[0]->is_null_allowed !== 'true'
+            || count($contactField[0]->xpath('dependencies/attribute[@id="org_id"]')) !== 1
+            || (string) $contactField[0]->filter !== (string) $ciField[0]->filter) {
+            throw new \RuntimeException('Expected an optional contact cost center with the CI organization filter.');
+        }
+        if (count($model->xpath('//class[@id="Person" or @id="Team"]/fields/field[@id="costcenter_id"]')) !== 0) {
+            throw new \RuntimeException('Contact subclasses must inherit the cost center field.');
+        }
+        foreach (['Contact', 'Person', 'Team'] as $class) {
+            $search = '//class[@id="' . $class . '"]/presentation/search/items/item[@id="costcenter_id"]';
+            if (count($model->xpath($search)) !== 1) {
+                throw new \RuntimeException('Missing cost center search filter for ' . $class);
+            }
+        }
+        $person = '//class[@id="Person"]/presentation/details/items/item[@id="col:col1"]/items'
+            . '/item[@id="fieldset:Person:info"]/items/item[@id="costcenter_id"]';
+        $team = '//class[@id="Team"]/presentation/details/items/item[@id="costcenter_id"]';
+        if (count($model->xpath($person)) !== 1 || count($model->xpath($team)) !== 1) {
+            throw new \RuntimeException('Missing cost center on a person or team form.');
+        }
+    };
     $tests['order request callback is connected to compute values'] = static function () use ($bridge): void {
         $listeners = $bridge->xpath('//class[@id="OrderRequest"]/event_listeners/event_listener[event="EVENT_DB_COMPUTE_VALUES" and callback="OnOrderRequestComputeValuesCostCenter"]');
         if (count($listeners) !== 1) {
